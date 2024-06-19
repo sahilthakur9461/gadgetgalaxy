@@ -6,6 +6,7 @@ import slider from '../img/slider.jpg'
 import slider2 from '../img/silder2.webp'
 import slider3 from '../img/slider3.jpg'
 import CategorySection from '../modules/CategorySection';
+import Services from '../modules/Services';
 const Home = () => {
  
   return (
@@ -50,6 +51,7 @@ const Home = () => {
     </Carousel>
     
     <CategorySection/>
+    <Services/>
     </>
   )
 }

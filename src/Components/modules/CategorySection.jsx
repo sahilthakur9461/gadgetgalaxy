@@ -15,7 +15,7 @@ function CategorySection() {
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* First */}
-          <div className='py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'>
+          <div className='py-10 pl-5 duration-200 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end hover:scale-105'>
             <div>
               <div className="mb-4">
                 <p className='mb-[2px] text-gray-400'>Enjoy</p>
@@ -34,8 +34,9 @@ function CategorySection() {
               className="w-[320px] absolute bottom-0 right-0" 
             />
           </div>
+         
           {/* Second */}
-          <div className='py-10 pl-5 bg-amber-300 text-white rounded-3xl relative h-[320px] flex items-end'>
+          <div className='py-10 hover:scale-105 duration-200 pl-5 bg-amber-300 text-white rounded-3xl relative h-[320px] flex items-end'>
             <div>
               <div className="mb-4">
                 <p className='mb-[2px] text-gray-400'>Smart</p>
@@ -55,7 +56,7 @@ function CategorySection() {
             />
           </div>
           {/* Third */}
-          <div className='col-span-2 py-10 pl-5 bg-danger text-white rounded-3xl relative h-[320px] flex items-end'>
+          <div className='col-span-2 py-10 pl-5 duration-200 hover:scale-105 bg-danger text-white rounded-3xl relative h-[320px] flex items-end'>
             <div>
               <div className="mb-4">
                 <p className='mb-[2px] text-gray-400'>Work</p>
@@ -80,7 +81,7 @@ function CategorySection() {
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* 2row 1 */}
-            <div className='col-span-2 py-10 pl-5 bg-gradient-to-br from-gray-300/90 to-black/80 text-white rounded-3xl relative h-[320px] flex items-end'>
+            <div className='col-span-2 py-10 pl-5  duration-200 bg-gradient-to-br from-gray-300/90 to-black/80 text-white rounded-3xl relative h-[320px]  hover:scale-105 flex items-end'>
               <div>
                 <div className="mb-4">
                   <p className='mb-[2px] text-black'>Enjoy</p>
@@ -100,7 +101,7 @@ function CategorySection() {
               />
             </div>
             {/* 2row 2 */}
-            <div className='py-10 pl-5 bg-fuchsia-600 text-white rounded-3xl relative h-[320px] flex items-end'>
+            <div className='py-10 pl-5 bg-fuchsia-600 duration-200 hover:scale-105 text-white rounded-3xl relative h-[320px] flex items-end'>
               <div>
                 <div className="mb-4">
                   <p className='mb-[2px] text-gray-400'>Enjoy</p>
