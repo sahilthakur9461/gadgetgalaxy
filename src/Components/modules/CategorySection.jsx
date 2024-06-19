@@ -4,7 +4,7 @@ import image2 from '../img/watch.png';
 import image3 from '../img/macbook.png';
 import image4 from '../img/speaker.png';
 import image5 from '../img/gaming.png';
-// import image6 from '../img/images6.png';
+import image6 from '../img/iphone1.png';
 import Button from "../button/Button";
 
 
@@ -44,7 +44,7 @@ function CategorySection() {
                 <p className='text-4xl xl:text-5xl font-bold opacity-50 mb-2'>Smartwatch</p>
                 <Button
                   text="Browse"
-                  bgColor={"bg-info"}
+                  bgColor={"bg-secondary"}
                   textColor={"text-white"}
                 />
               </div>
@@ -109,7 +109,7 @@ function CategorySection() {
                   <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-2'>Speaker</p>
                   <Button
                     text="Browse"
-                    bgColor={"bg-info"}
+                    bgColor={"bg-black"}
                     textColor={"text-white"}
                   />
                 </div>
@@ -120,29 +120,31 @@ function CategorySection() {
                 className="w-[200px] absolute top-0 right-0 transform translate-x-4 -translate-y-4" 
               />
             </div>
-            {/* 3row 3 */}
-            {/* <div className='py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'>
-            <div>
-              <div className="mb-4">
-                <p className='mb-[2px] text-gray-400'>Enjoy</p>
-                <p className='text-2xl font-semibold mb-[2px]'>With</p>
-                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-2'>Earphone</p>
-                <Button
-                  text="Browse"
-                  bgColor={"bg-danger"}
-                  textColor={"text-white"}
-                />
+           
+          {/* {iphone1 3 row} */}
+          <div className='py-10 pl-5 bg-cyan-400 text-white rounded-3xl relative h-[320px] flex items-end'>
+              <div>
+                <div className="mb-4">
+                  <p className='mb-[2px] text-gray-400'>Enjoy</p>
+                  <p className='text-2xl font-semibold mb-[2px]'>With</p>
+                  <p className='text-4xl xl:text-5xl font-bold opacity-40 mb-2'>Iphone</p>
+                  <Button
+                    text="Browse"
+                    bgColor={"bg-black"}
+                    textColor={"text-white"}
+                  />
+                </div>
               </div>
+              <img 
+                src={image6} 
+                alt="Speaker" 
+                className="w-[115px] absolute top-0 right-8 shadow-sm transform translate-x-4 -translate-y-4" 
+              />
             </div>
-            <img 
-              src={image6} 
-              alt="Earphone" 
-              className="w-[320px] absolute bottom-0 right-0" 
-            />
-          </div> */}
           </div>
         </div>
       </div>
+      <div className=''></div>
     </div>
   );
 }
