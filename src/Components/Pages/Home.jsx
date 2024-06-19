@@ -1,60 +1,58 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Carousel from 'react-bootstrap/Carousel';
-// import Card from 'react-bootstrap/Card';
-// import Button from 'react-bootstrap/Button';
-import slider from '../img/slider.jpg'
-import slider2 from '../img/silder2.webp'
-import slider3 from '../img/slider3.jpg'
+import slider from '../img/slider.jpg';
+import slider2 from '../img/silder2.webp';
+import slider3 from '../img/slider3.jpg';
 import CategorySection from '../modules/CategorySection';
 import Services from '../modules/Services';
+import Videoad from '../modules/Videoad';
+
 const Home = () => {
- 
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1.5, 0.7]);
+
   return (
     <>
-    
-    <Carousel data-bs-theme="dark" > 
-      <Carousel.Item>
-        <img
-          className="d-block w-100 vh-100"
-          src={slider}
-          alt="First slide"
-        />
-        {/* <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 vh-100  "
-          src={slider2}
-          alt="Second slide"
-        />
-        {/* <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 vh-100  "
-          src={slider3}
-          alt="Third slide"
-        />
-        {/* <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-
-    </Carousel>
-    
-    <CategorySection/>
-    <Services/>
+      <motion.div ref={containerRef}>
+        <Carousel data-bs-theme="dark">
+          <Carousel.Item>
+            <motion.img
+              style={{ scale }}
+              className="d-block w-100 vh-100"
+              src={slider}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <motion.img
+              style={{ scale }}
+              className="d-block w-100 vh-100"
+              src={slider2}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <motion.img
+              style={{ scale }}
+              className="d-block w-100 vh-100"
+              src={slider3}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </motion.div>
+      
+      <CategorySection />
+      <Services />
+      <Videoad/>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
