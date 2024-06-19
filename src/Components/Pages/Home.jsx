@@ -47,6 +47,7 @@ const Home = () => {
           </p>
         </Carousel.Caption> */}
       </Carousel.Item>
+
     </Carousel>
     
     <CategorySection/>
