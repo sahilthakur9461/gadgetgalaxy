@@ -15,7 +15,7 @@ const Home = () => {
     <Carousel data-bs-theme="dark" > 
       <Carousel.Item>
         <img
-          className="d-block w-100 vh-100"
+          className="d-block w-100 vh-100 object-cover"
           src={slider}
           alt="First slide"
         />
@@ -26,7 +26,7 @@ const Home = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 vh-100  "
+          className="d-block w-100 vh-100 object-cover "
           src={slider2}
           alt="Second slide"
         />
@@ -37,7 +37,7 @@ const Home = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 vh-100  "
+          className="d-block w-100 vh-100 object-cover "
           src={slider3}
           alt="Third slide"
         />

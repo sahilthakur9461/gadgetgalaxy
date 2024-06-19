@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCheckCircle, FaHeadphonesAlt } from 'react-icons/fa';
-import { FaCarSide, FaWallet } from 'react-icons/fa6';
+import {  FaWallet } from 'react-icons/fa6';
 import { TbTruckDelivery } from 'react-icons/tb';
 
 function Services() {
