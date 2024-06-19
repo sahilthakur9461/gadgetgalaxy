@@ -122,7 +122,7 @@ function CategorySection() {
             </div>
            
           {/* {iphone1 3 row} */}
-          <div className='py-10 pl-5 bg-cyan-400 text-white rounded-3xl relative h-[320px] flex items-end'>
+          <div className='py-10 pl-5 bg-cyan-400 duration-200 hover:scale-105 text-white rounded-3xl relative h-[320px] flex items-end'>
               <div>
                 <div className="mb-4">
                   <p className='mb-[2px] text-gray-400'>Enjoy</p>
@@ -144,7 +144,6 @@ function CategorySection() {
           </div>
         </div>
       </div>
-      <div className=''></div>
     </div>
   );
 }
