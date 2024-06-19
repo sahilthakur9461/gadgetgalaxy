@@ -10,15 +10,15 @@ import Darkmode from "../modules/Darkmode";
 const menuItems = [
   {
     name: 'Home',
-    href: '#',
+    href: '/',
   },
   {
     name: 'About',
-    href: '#',
+    href: '/About',
   },
   {
     name: 'Contact',
-    href: '#',
+    href: '/Contact',
   },
 ];
 
