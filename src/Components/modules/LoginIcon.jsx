@@ -1,29 +1,24 @@
+import { CgLogOut } from "react-icons/cg"; 
+import { CgLogIn } from "react-icons/cg"; 
 import React, { useState } from 'react';
-import login from '../img/log-in.svg';
-import logout from '../img/log-out.svg';
+
 
 function LoginIcon() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLoginClick = (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    setIsLoggedIn(true);
-  };
-
-  const handleLogoutClick = (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    setIsLoggedIn(false);
+  const handleLoginClick = () => {
+    setIsLoggedIn(!isLoggedIn);
   };
 
   return (
     <div className="relative">
-      {!isLoggedIn ? (
+      {/* {!isLoggedIn ? (
         <a href="/" onClick={handleLoginClick}>
           <img
             src={login}
             alt="login"
             className="w-12 cursor-pointer absolute right-0  transition-all duration-300"
-          />f
+          />
         </a>
       ) : (
         <a href="/" onClick={handleLogoutClick}>
@@ -33,7 +28,8 @@ function LoginIcon() {
             className="w-12 cursor-pointer transition-all duration-300"
           />
         </a>
-      )}
+      )} */}
+      {isLoggedIn  ? <CgLogIn color="white" size={25} className="cursor-pointer" onClick={handleLoginClick}/> : <CgLogOut color="white" size={25} className="cursor-pointer" onClick={handleLoginClick}/>}
     </div>
   );
 }
