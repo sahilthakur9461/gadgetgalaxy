@@ -7,6 +7,7 @@ import slider3 from '../img/slider3.jpg';
 import CategorySection from '../modules/CategorySection';
 import Services from '../modules/Services';
 import Videoad from '../modules/Videoad';
+import PartnerSection from '../modules/PartnerSection';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -51,6 +52,7 @@ const Home = () => {
       <CategorySection />
       <Services />
       <Videoad/>
+      <PartnerSection/>
     </>
   );
 }
