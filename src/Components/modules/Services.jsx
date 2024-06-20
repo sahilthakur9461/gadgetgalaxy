@@ -37,7 +37,7 @@ function Services() {
         <div className="p-6 rounded-lg shadow-lg bg-gray-100 dark:bg-slate-200">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 ">
             {ServiceData.map((data) => (
-              <div key={data.id} className="flex flex-col items-center sm:flex-row gap-4 p-4   dark:bg-black rounded-lg shadow dark:shadow-lg-dark">
+              <div key={data.id} className="flex flex-col items-center sm:flex-row gap-4 p-4 hover:scale-110 duration-300  dark:bg-black rounded-lg shadow dark:shadow-lg-dark">
                 {data.icon}
                 <div className=''>
                   <h1 className="text-xl font-semibold  dark:text-white">{data.title}</h1>
