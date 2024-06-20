@@ -7,7 +7,7 @@ function Videoad() {
       <div className='bg-black videosize py-8 shadow-lg w-full h-screen dark:bg-black flex items-center justify-center relative'>
         <video
           controls
-          autoplay
+          autoPlay
           loop
           muted
           className='w-full object-cover absolute top-0 bg-black'

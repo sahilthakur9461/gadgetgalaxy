@@ -5,6 +5,7 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import '../../App.css';
 import Darkmode from "../modules/Darkmode";
+import LoginIcon from "../modules/LoginIcon";
 
 const menuItems = [
   {
@@ -22,8 +23,8 @@ const menuItems = [
 ];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isInputVisible, setInputVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState();
+  const [isInputVisible, setInputVisible] = useState();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -101,6 +102,7 @@ export function Header() {
             </div>
           </button>
 
+          <LoginIcon />
           <Darkmode />
 
           <div className="ml-2 lg:hidden">
