@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Menu, X, MapPin } from 'lucide-react'
-import about from "../img/about.jpg"
+import about from "../img/about.jpeg"
 
 const menuItems = [
   {
