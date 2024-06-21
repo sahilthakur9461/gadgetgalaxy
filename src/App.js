@@ -9,6 +9,7 @@ import { About } from './Components/Pages/About';
 
 
 
+
 function App() {
  
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path="/" element={<Layout />}>
     <Route path="/" element={<Home />} /> 
     <Route path="/About" element={<About />} /> 
+    
     
 
 
