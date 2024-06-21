@@ -1,4 +1,3 @@
-
 import React from 'react';
 import about from '../img/about.jpg';
 import airpods from '../img/airpods.jpg';
