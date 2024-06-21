@@ -21,7 +21,7 @@ function Contact() {
     <div className="font-sans bg-cover bg-center bg-no-repeat bg-fixed backdrop-filter" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container mx-auto text-black opacity-80 py-20 px-4 lg:px-0">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
+          {/* <h1 className="text-4xl font-bold">Contact Us</h1> */}
           {/* <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magra aliqua. Ut enim ad minim veniam.
