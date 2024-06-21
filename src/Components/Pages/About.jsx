@@ -1,7 +1,5 @@
-'use client'
-
 import React from 'react'
-import { Menu, X, MapPin } from 'lucide-react'
+// import { Menu, X, MapPin } from 'lucide-react'
 import about from "../img/about.jpeg"
 
 const menuItems = [
@@ -15,7 +13,7 @@ const menuItems = [
   },
   {
     name: 'Contact',
-    href: '/contact',
+    href: '/Contact',
   },
 ]
 
@@ -157,6 +155,7 @@ export function About() {
             />
           </div>
         </div>
+        
       </div>
       <hr className="mt-6" />
       {/* footer */}
