@@ -35,7 +35,7 @@ export function Header() {
   };
 
   return (
-    <div className="fixed top-0 z-10 w-full dark:bg-neutral-900 duration-200 shadow-md">
+    <div className="fixed top-0 z-10 w-full dark:bg-neutral-900 duration-200 shadow-md backdrop-filter backdrop-blur-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>

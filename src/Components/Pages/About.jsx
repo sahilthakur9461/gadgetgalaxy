@@ -101,7 +101,7 @@ export function About() {
           <img
             src={airpods}
             alt="Getting Started"
-            className="rounded-lg w-[489px] h-[475px] object-cover shadow"
+            className="rounded-lg w-[489px] h-[475px] object-cover shadow-lg-dark"
           />
         </div>
       </div>
