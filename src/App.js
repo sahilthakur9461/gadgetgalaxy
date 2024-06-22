@@ -5,8 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from './Components/Layouts/Layout';
 import Home from './Components/Pages/Home';
 import { About } from './Components/Pages/About';
-import Contact from './Components/Pages/Contact';
+
 import { BackgroundBeams } from './Components/BackgroundBerams';
+import { Contact } from './Components/Pages/Contact';
 
 
 
