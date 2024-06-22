@@ -6,6 +6,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import '../../App.css';
 import Darkmode from "../modules/Darkmode";
 import LoginIcon from "../modules/LoginIcon";
+import Login from "../registration/Login";
 
 const menuItems = [
   {
@@ -20,6 +21,7 @@ const menuItems = [
     name: 'Contact',
     href: '/Contact',
   },
+
 ];
 
 export function Header() {
@@ -106,7 +108,8 @@ export function Header() {
           <LoginIcon />
 
           <div className="ml-2 lg:hidden">
-            <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer text-gray-900 dark:text-gray-100" />
+            <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer text-gray-900 dark:text-gray-100" 
+           />  <Login/>
           </div>
         </div>
 
