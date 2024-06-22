@@ -34,7 +34,7 @@ const PopupMenu = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <label className="relative inline-block text-lg">
+    <label className="relative inline-block text-lg z-50">
       <input
         type="checkbox"
         className="hidden"
