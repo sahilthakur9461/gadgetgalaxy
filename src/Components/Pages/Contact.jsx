@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import bgImage from '../img/contactus.jpg';
+import bgImage from '../img/game.jpg';
 
 function Contact() {
   useEffect(() => {

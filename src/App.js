@@ -6,6 +6,7 @@ import Layout from './Components/Layouts/Layout';
 import Home from './Components/Pages/Home';
 import { About } from './Components/Pages/About';
 import Contact from './Components/Pages/Contact';
+import { BackgroundBeams } from './Components/BackgroundBerams';
 
 
 
@@ -14,6 +15,7 @@ function App() {
   return (
    <>
    <BrowserRouter>
+   <BackgroundBeams classname='bg-black h-screen'/>
     <Routes>
     <Route path="/" element={<Layout />}>
     <Route path="/" element={<Home />} /> 

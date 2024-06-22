@@ -8,8 +8,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "clsx": "^2.1.1",
     "express": "^4.19.2",
-    "framer-motion": "^11.2.10",
+    "framer-motion": "^11.2.11",
     "lucide-react": "^0.394.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
@@ -21,7 +22,9 @@
     "react-slick": "^0.30.2",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.5",
+    "shadcn-ui": "^0.8.0",
     "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^2.3.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
