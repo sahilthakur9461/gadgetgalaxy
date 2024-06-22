@@ -8,6 +8,7 @@ import { About } from './Components/Pages/About';
 
 import { BackgroundBeams } from './Components/BackgroundBerams';
 import { Contact } from './Components/Pages/Contact';
+import ProductPage from './Components/Pages/ProductPage';
 
 
 
@@ -22,6 +23,7 @@ function App() {
     <Route path="/" element={<Home />} /> 
     <Route path="/About" element={<About />} /> 
     <Route path="/Contact" element={<Contact />} /> 
+    <Route path="/Product" element={<ProductPage />} /> 
 
 
 
