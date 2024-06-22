@@ -12,6 +12,9 @@ import Login from './Components/registration/Login';
 
 import { Contact } from './Components/Pages/Contact';
 import ProductPage from './Components/Pages/ProductPage';
+import AdminLogin from './Admin/pages/AdminLogin';
+import AdminDashboard from './Admin/pages/AdminDashborad';
+
 
 
 
@@ -23,6 +26,10 @@ function App() {
    <BrowserRouter>
    {/* <BackgroundBeams classname='bg-black h-screen'/> */}
     <Routes>
+    <Route path="/AdminLogin" element={<AdminLogin />} /> 
+    <Route path="/AdminDashboard" element={<AdminDashboard />} /> 
+  
+      
     <Route path="/" element={<Layout />}>
     <Route path="/" element={<Home />} /> 
     <Route path="/About" element={<About />} /> 
