@@ -63,9 +63,9 @@ export function Header() {
                 Dropdown Hover
               </button>
               <div className="dropdown-menu absolute top-full left-0 w-48 mt-2 hidden group-hover:block   dark:bg-neutral-900 rounded-md shadow-lg">
-                <ul className="py-2">
+                <ul className="py-1">
                   <li>
-                    <a className="block px-4 py-2 text-gray-900 dark:text-gray-100  hover:bg-gray-100 dark:hover:bg-gray-700" href="/">Top Rated</a>
+                    <a className="block px-4 py-2 text-gray-900 dark:text-gray-100  hover:bg-gray-100 dark:hover:bg-gray-700" href="/Product">All Product</a>
                   </li>
                   <li>
                     <a className="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700" href="/">Trending</a>

@@ -1,82 +1,157 @@
 
-import React, { useEffect } from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import bgImage from '../img/game.jpg';
+import React from 'react'
+import { Menu, X, MapPin } from 'lucide-react'
 
-function Contact() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+const menuItems = [
+  {
+    name: 'Home',
+    href: '/Home',
+  },
+  {
+    name: 'About',
+    href: '/About',
+  },
+  {
+    name: 'Contact',
+    href: '/Contact',
+  },
+]
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+export function Contact() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
-  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
-    <div className="font-sans bg-cover bg-center bg-no-repeat bg-fixed backdrop-filter" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="container mx-auto text-black opacity-80 py-20 px-4 lg:px-0">
-        <div className="text-center mb-12">
-          {/* <h1 className="text-4xl font-bold">Contact Us</h1> */}
-          {/* <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magra aliqua. Ut enim ad minim veniam.
-          </p> */}
-        </div>
-        <div className="flex flex-wrap">
-          <div className="w-full lg:w-1/2 lg:pr-8 mb-12 lg:mb-0">
-            <div className="mb-10 flex items-start">
-              <FaMapMarkerAlt className="text-3xl text-teal-400 mr-4" />
-              <div>
-                <h2 className="text-xl font-semibold text-teal-400">Address</h2>
-                <p>1002 West 5th Ave,</p>
-                <p>Alaska, New York,</p>
-                <p>55060.</p>
-              </div>
-            </div>
-            <div className="mb-10 flex items-start">
-              <FaPhoneAlt className="text-3xl text-teal-400 mr-4" />
-              <div>
-                <h2 className="text-xl font-semibold text-teal-400">Phone</h2>
-                <p>12523-4566-8954-8956.</p>
-              </div>
-            </div>
-            <div className="mb-10 flex items-start">
-              <FaEnvelope className="text-3xl text-teal-400 mr-4" />
-              <div>
-                <h2 className="text-xl font-semibold text-teal-400">Email</h2>
-                <p>contactemail@gmail.com</p>
-              </div>
-            </div>
+    <div>
+      <div className="mx-auto max-w-7xl px-4">
+        {/* Hero Map */}
+        <div className="flex flex-col space-y-8 pb-10 pt-12 md:pt-24">
+          <div className="mx-auto max-w-max rounded-full border bg-gray-50 p-1 px-3">
+            <p className="text-center text-xs font-semibold leading-normal md:text-sm">
+              Share your thoughts
+            </p>
           </div>
-          <div className="w-full lg:w-1/2 p-10 rounded-lg shadow-4xl">
-            {/* <form>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">Send Message</h2>
-              <div className="mb-6">
-                <label className="block text-gray-800 mb-2">Full Name</label>
-                <input type="text" className="w-full border-b border-gray-400 py-2 focus:outline-none" />
+          <p className="text-center text-3xl font-bold text-gray-900 md:text-5xl md:leading-10">
+            CONTACT US
+          </p>
+          <p className="mx-auto max-w-4xl text-center text-base text-gray-600 md:text-xl">
+          "Have questions or feedback? We're here to help! Feel free to reach out to us via the contact form below or directly at [email address]. Our team strives to respond to all inquiries promptly. We look forward to hearing from you!"
+          </p>
+        </div>
+        <div className="mx-auto max-w-7xl py-12 md:py-24">
+          <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
+            {/* contact from */}
+            <div className="flex items-center justify-center">
+              <div className="px-2 md:px-12">
+                <p className="text-2xl font-bold text-gray-900 md:text-4xl">Get in touch</p>
+                <p className="mt-4 text-lg text-gray-600">
+                  Our friendly team would love to hear from you.
+                </p>
+                <form action="" className="mt-8 space-y-4">
+                  <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
+                    <div className="grid w-full  items-center gap-1.5">
+                      <label
+                        className="text-sm font-medium leading-none text-gray-700 "
+                        htmlFor="first_name"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black"
+                        type="text"
+                        id="first_name"
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div className="grid w-full  items-center gap-1.5">
+                      <label
+                        className="text-sm font-medium leading-none text-gray-700 "
+                        htmlFor="last_name"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1  dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black"
+                        type="text"
+                        id="last_name"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid w-full  items-center gap-1.5">
+                    <label
+                      className="text-sm font-medium leading-none text-gray-700 "
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black"
+                      type="text"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div className="grid w-full  items-center gap-1.5">
+                    <label
+                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      htmlFor="phone_number"
+                    >
+                      Phone number
+                    </label>
+                    <input
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black"
+                      type="tel"
+                      id="phone_number"
+                      placeholder="Phone number"
+                    />
+                  </div>
+                  <div className="grid w-full  items-center gap-1.5">
+                    <label
+                      className="text-sm font-medium leading-none text-gray-700  "
+                      htmlFor="message"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed  dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black "
+                      id="message"
+                      placeholder="Leave us a message"
+                      cols={4}
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  >
+                    Send Message
+                  </button>
+                </form>
+
               </div>
-              <div className="mb-6">
-                <label className="block text-gray-800 mb-2">Email</label>
-                <input type="email" className="w-full border-b border-gray-400 py-2 focus:outline-none" />
-              </div>
-              <div className="mb-6">
-                <label className="block text-gray-800 mb-2">Type your message...</label>
-                <textarea className="w-full border-b border-gray-400 py-2 focus:outline-none" />
-              </div>
-              <button type="button" className="w-full py-3 bg-teal-400 text-white font-semibold rounded-lg">Send</button>
-            </form> */}
-            <div className="visme_d" data-title="Untitled Project" data-url="4d6w9y6k-untitled-project" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="77107"></div>
+            </div>
+            <img
+              alt="Contact us"
+              className="hidden max-h-full w-full rounded-lg object-cover lg:block"
+              src="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=800&q=80"
+            />
           </div>
         </div>
       </div>
+      <hr className="mt-6" />
     </div>
-  );
+  )
 }
 
-export default Contact;
+
+
+
+
+
+
+
+
 
