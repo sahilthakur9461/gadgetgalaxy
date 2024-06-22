@@ -18,7 +18,8 @@ function Contact() {
   
 
   return (
-    <div className="font-sans bg-cover bg-center bg-no-repeat bg-fixed backdrop-filter" style={{ backgroundImage: `url(${bgImage})` }}>
+    <>
+    <div className="font-sans bg-cover bg-center bg-no-repeat bg-fixed " style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container mx-auto text-black opacity-80 py-20 px-4 lg:px-0">
         <div className="text-center mb-12">
           {/* <h1 className="text-4xl font-bold">Contact Us</h1> */}
@@ -28,11 +29,12 @@ function Contact() {
           </p> */}
         </div>
         <div className="flex flex-wrap">
-          <div className="w-full lg:w-1/2 lg:pr-8 mb-12 lg:mb-0">
-            <div className="mb-10 flex items-start">
+          <div className="w-full lg:w-1/2 lg:pr-8 mb-12 lg:mb-0 ">
+         
+            <div className="mb-10 flex items-start " >
               <FaMapMarkerAlt className="text-3xl text-teal-400 mr-4" />
               <div>
-                <h2 className="text-xl font-semibold text-teal-400">Address</h2>
+                <h2 className="text-xl font-semibold text-teal-400 ">Address</h2>
                 <p>1002 West 5th Ave,</p>
                 <p>Alaska, New York,</p>
                 <p>55060.</p>
@@ -53,6 +55,7 @@ function Contact() {
               </div>
             </div>
           </div>
+         
           <div className="w-full lg:w-1/2 p-10 rounded-lg shadow-4xl">
             {/* <form>
               <h2 className="text-3xl font-bold text-gray-800 mb-8">Send Message</h2>
@@ -75,6 +78,7 @@ function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
