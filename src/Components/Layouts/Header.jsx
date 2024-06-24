@@ -59,7 +59,7 @@ export function Header() {
               </li>
             ))}
             <li className="relative group">
-              <button className="inline-flex items-center gap-1 py-1 px-2 text-sm text-gray-900 dark:text-gray-100 rounded-full font-semibold cursor-pointer shadow-xs transition-all duration-200 hover:text-blue-500 dark:hover:text-blue-400">
+              <button className="inline-flex items-center gap-1  px-2 text-sm text-gray-900 dark:text-gray-100 rounded-full font-semibold cursor-pointer shadow-xs transition-all duration-200 hover:text-blue-500 dark:hover:text-blue-400">
                 Dropdown Hover
               </button>
               <div className="dropdown-menu absolute top-full left-0 w-48 mt-2 hidden group-hover:block   dark:bg-neutral-900 rounded-md shadow-lg">

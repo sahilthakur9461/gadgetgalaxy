@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "tailwindcss/tailwind.css";
-import "boxicons";
+import { AiOutlineUser, AiOutlineLock } from "react-icons/ai"; // Import icons from React Icons
 
 function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -22,12 +22,12 @@ function AdminLogin() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen " >
+    <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-center">Admin Login</h2>
         <form id="loginForm" onSubmit={handleLogin}>
           <div className="flex items-center mb-4 border-b border-gray-300 py-2">
-            <box-icon className="text-gray-500" name="user"></box-icon>
+            <AiOutlineUser className="text-gray-500 mr-2" size={20} /> {/* Use React Icon */}
             <input
               type="text"
               id="username"
@@ -40,7 +40,7 @@ function AdminLogin() {
             />
           </div>
           <div className="flex items-center mb-6 border-b border-gray-300 py-2">
-            <box-icon className="text-gray-500" name="lock-alt"></box-icon>
+            <AiOutlineLock className="text-gray-500 mr-2" size={20} /> {/* Use React Icon */}
             <input
               type="password"
               id="password"

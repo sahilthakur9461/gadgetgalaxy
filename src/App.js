@@ -13,7 +13,8 @@ import Login from './Components/registration/Login';
 import { Contact } from './Components/Pages/Contact';
 import ProductPage from './Components/Pages/ProductPage';
 import AdminLogin from './Admin/pages/AdminLogin';
-import AdminDashboard from './Admin/pages/AdminDashborad';
+import AdminDashboard from './Admin/pages/AdminDashboard';
+import AddProduct from './Admin/pages/AddProduct';
 
 
 
@@ -28,6 +29,7 @@ function App() {
     <Routes>
     <Route path="/AdminLogin" element={<AdminLogin />} /> 
     <Route path="/AdminDashboard" element={<AdminDashboard />} /> 
+    <Route path="/AddProduct" element={<AddProduct />} /> 
   
       
     <Route path="/" element={<Layout />}>
