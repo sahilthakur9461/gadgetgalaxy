@@ -88,7 +88,7 @@ const PopupMenu = () => {
             </Link >
           </li>
           <li>
-            <button className="flex items-center gap-2 w-full p-2 text-slate-100 rounded hover:bg-blue-500 hover:text-white">
+            <Link to="/SignUp" className="flex items-center gap-2 w-full p-2 text-slate-100 rounded hover:bg-blue-500 hover:text-white">
               <svg
                 width="14"
                 height="14"
@@ -104,7 +104,7 @@ const PopupMenu = () => {
                 />
               </svg>
               <span>Sign Up</span>
-            </button>
+            </Link>
           </li>
         </ul>
       </nav>

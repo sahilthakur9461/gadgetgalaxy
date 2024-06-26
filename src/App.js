@@ -15,6 +15,7 @@ import ProductPage from './Components/Pages/ProductPage';
 import AdminLogin from './Admin/pages/AdminLogin';
 import AdminDashboard from './Admin/pages/AdminDashboard';
 import AddProduct from './Admin/pages/AddProduct';
+import { SignUp } from './Components/registration/SignUp';
 
 
 
@@ -31,13 +32,15 @@ function App() {
     <Route path="/AdminDashboard" element={<AdminDashboard />} /> 
     <Route path="/AddProduct" element={<AddProduct />} /> 
   
-      
+    <Route path="/SignUp" element={<SignUp />} /> 
+    <Route path="/Login" element={<Login />} /> 
+    
+    
     <Route path="/" element={<Layout />}>
     <Route path="/" element={<Home />} /> 
     <Route path="/About" element={<About />} /> 
     <Route path="/Contact" element={<Contact />} /> 
 
-    <Route path="/Login" element={<Login />} /> 
 
     <Route path="/Product" element={<ProductPage />} /> 
 
