@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "tailwindcss/tailwind.css";
 import { AiOutlineUser, AiOutlineLock } from "react-icons/ai"; // Import icons from React Icons
+import image from "../../Components/img/adminimg.jpg"; // Import the image
 
 function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -22,8 +23,11 @@ function AdminLogin() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen ">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
+    <div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <div className="bg-white bg-opacity-50 p-8 rounded shadow-md w-full max-w-sm backdrop-filter backdrop-blur-lg">
         <h2 className="text-2xl font-bold mb-6 text-center">Admin Login</h2>
         <form id="loginForm" onSubmit={handleLogin}>
           <div className="flex items-center mb-4 border-b border-gray-300 py-2">

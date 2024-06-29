@@ -16,6 +16,8 @@ import AdminLogin from './Admin/pages/AdminLogin';
 import AdminDashboard from './Admin/pages/AdminDashboard';
 import AddProduct from './Admin/pages/AddProduct';
 import { SignUp } from './Components/registration/SignUp';
+import CoustomerQuery from './Admin/pages/CoustomerQuery';
+import EditProduct from './Admin/pages/EditProduct';
 
 
 
@@ -28,9 +30,11 @@ function App() {
    <BrowserRouter>
    {/* <BackgroundBeams classname='bg-black h-screen'/> */}
     <Routes>
-    <Route path="/AdminLogin" element={<AdminLogin />} /> 
-    <Route path="/AdminDashboard" element={<AdminDashboard />} /> 
-    <Route path="/AddProduct" element={<AddProduct />} /> 
+    <Route path="/Adminlogin" element={<AdminLogin />} /> 
+    <Route path="/Admindashboard" element={<AdminDashboard />} /> 
+    <Route path="/Addproduct" element={<AddProduct />} /> 
+    <Route path="/Coustomerquery" element={<CoustomerQuery />} /> 
+    <Route path="/Editproduct" element={<EditProduct />} /> 
   
     <Route path="/SignUp" element={<SignUp />} /> 
     <Route path="/Login" element={<Login />} /> 
@@ -40,8 +44,6 @@ function App() {
     <Route path="/" element={<Home />} /> 
     <Route path="/About" element={<About />} /> 
     <Route path="/Contact" element={<Contact />} /> 
-
-
     <Route path="/Product" element={<ProductPage />} /> 
 
 

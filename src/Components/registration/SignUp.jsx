@@ -1,9 +1,59 @@
-import React from 'react'
-import { ArrowRight } from 'lucide-react'
-import photo from "../img/signupphoto.avif"
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
+import photo from "../img/signupphoto.avif";
+import { Link } from 'react-router-dom';
 
 export function SignUp() {
+ 
+
+
+  const [form, setForm] = useState({
+    username: "",
+    email: "",
+    password: "",
+   
+  });
+
+
+  const handleChange = (ev) => {
+    const { name, value } = ev.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+
+
+  const handleUserSubmit = async(ev) => {
+    ev.preventDefault();
+
+    console.log(form);
+    if (form.username && form.email  && form.password) {
+      fetch("http://localhost:4001/signup", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Response data:", data);
+
+          if (data) {
+            console.log("User data:", data);
+            
+          } else {
+            alert(data.error || "An unknown error occurred");
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+  };
+
+
+
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2 bg-neutral-800 text-white">
@@ -20,7 +70,7 @@ export function SignUp() {
                 Sign In
               </Link>
             </p>
-            <form action="#" method="POST" className="mt-8">
+            <form action="#" method="POST" className="mt-8" onSubmit={handleUserSubmit}>
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="text-base font-medium text-white">
@@ -32,8 +82,11 @@ export function SignUp() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="text"
                       placeholder="Full Name"
+                      name='username'
                       id="name"
-                    ></input>
+                      value={username}
+                      onChange={(ev) => handleChange(ev)}
+                    />
                   </div>
                 </div>
                 <div>
@@ -46,8 +99,11 @@ export function SignUp() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       placeholder="Email"
+                      name='email'
+                      value={email}
                       id="email"
-                    ></input>
+                      onChange={(ev) => handleChange(ev)}
+                    />
                   </div>
                 </div>
                 <div>
@@ -62,13 +118,16 @@ export function SignUp() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
+                      name='password'
+                      value={password}
                       id="password"
-                    ></input>
+                      onChange={(ev) => handleChange(ev)}
+                    />
                   </div>
                 </div>
                 <div>
                   <button
-                    type="button"
+                    type="submit"
                     className="inline-flex w-full items-center justify-center rounded-md bg-white px-3.5 py-2.5 font-semibold leading-7 text-gray-700 hover:bg-black/80 hover:text-black"
                   >
                     Create Account <ArrowRight className="ml-2" size={16} />
@@ -121,5 +180,5 @@ export function SignUp() {
         </div>
       </div>
     </section>
-  )
+  );
 }

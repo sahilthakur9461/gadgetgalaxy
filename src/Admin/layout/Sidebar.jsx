@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="flex min-h-screen bg-neutral-800 text-white">
-      <div className="w-64 bg-neutral-800">
+    <div className="flex min-h-screen bg-black text-white">
+      <div className="w-64 bg-black">
         <header className="flex items-center justify-between p-4">
           <div className="flex items-center space-x-4">
             <div className="h-10 w-10 bg-gray-300 rounded-md"></div>
@@ -51,13 +51,13 @@ const App = () => {
 };
 
 const menuItems = [
-  { label: "Dashboard", link: "/AdminDashboard", icon: FaHome },
-  { label: "Add Products", link: "/AddProduct", icon: MdOutlineInventory2 },
-  { label: "Edit Product", link: "#", icon: FaBell },
+  { label: "Dashboard", link: "/Admindashboard", icon: FaHome },
+  { label: "Add Products", link: "/Addproduct", icon: MdOutlineInventory2 },
+  { label: "Edit Product", link: "/Editproduct", icon: FaBell },
   { label: "Users", link: "#", icon: FaUsers },
-  { label: "Querys", link: "#", icon: MdQueryStats },
+  { label: "Querys", link: "/Coustomerquery", icon: MdQueryStats },
   { label: "Orders", link: "#", icon: FaBoxOpen },
-  { label: "Logout", link: "#", icon: FaSignOutAlt },
+  { label: "Logout", link: "/Adminlogin", icon: FaSignOutAlt },
 ];
 
 export default App;

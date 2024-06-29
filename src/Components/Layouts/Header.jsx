@@ -7,6 +7,7 @@ import '../../App.css';
 import Darkmode from "../modules/Darkmode";
 import LoginIcon from "../modules/LoginIcon";
 import Login from "../registration/Login";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   {
@@ -50,12 +51,12 @@ export function Header() {
           <ul className=" inline-flex space-x-8 items-center">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="relative group">
@@ -109,7 +110,7 @@ export function Header() {
 
           <div className="ml-2 lg:hidden">
             <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer text-gray-900 dark:text-gray-100" 
-           />  <Login/>
+           />
           </div>
         </div>
 
