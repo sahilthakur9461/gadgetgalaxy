@@ -7,6 +7,7 @@ import "../../App.css";
 import Darkmode from "../modules/Darkmode";
 import LoginIcon from "../modules/LoginIcon";
 import Login from "../registration/Login";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   {
@@ -52,27 +53,22 @@ export function Header() {
           <ul className=" inline-flex space-x-8 items-center">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="relative group">
               <button className="inline-flex items-center gap-1  px-2 text-sm text-gray-900 dark:text-gray-100 rounded-full font-semibold cursor-pointer shadow-xs transition-all duration-200 hover:text-blue-500 dark:hover:text-blue-400">
                 Dropdown Hover
               </button>
-              <div className="dropdown-menu absolute top-full left-0 w-48 mt-0 hidden group-hover:block   dark:bg-neutral-900 rounded-md shadow-lg">
+              <div className="dropdown-menu absolute top-full left-0 w-48  hidden group-hover:block   dark:bg-neutral-900 rounded-md shadow-lg">
                 <ul className="py-1">
                   <li>
-                    <a
-                      className="block px-4 py-2 text-gray-900 dark:text-gray-100  hover:bg-gray-100 dark:hover:bg-gray-700"
-                      href="/Product"
-                    >
-                      All Product
-                    </a>
+                    <Link className="block px-4 py-2 text-gray-900 dark:text-gray-100  hover:bg-gray-100 dark:hover:bg-gray-700" to="/Product">All Product</Link>
                   </li>
 
                   <li>
@@ -157,13 +153,13 @@ export function Header() {
                 </div>
                 <nav className="mt-6 grid gap-y-4">
                   {menuItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>

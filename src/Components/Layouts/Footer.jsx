@@ -1,6 +1,7 @@
-import { ChevronRight } from "lucide-react";
-import React from "react";
-import logo from "../img/gg.jpg";
+import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import logo from '../img/gg.jpg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -33,77 +34,51 @@ const Footer = () => {
                 </h3>
                 <ul>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Features
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Pricing
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Affiliate Program
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Press Kit
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="w-full p-6 md:w-1/3">
               <div className="h-full">
-                <h3 className="tracking-px mb-9 text-xs font-semibold uppercase dark:hover:text-red-600 duration-75 ">
-                  Support
-                </h3>
+                <h3 className="tracking-px mb-9 text-xs font-semibold uppercase dark:hover:text-red-600 duration-75">Support</h3>
                 <ul>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Account
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Help
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Customer Support
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -115,28 +90,19 @@ const Footer = () => {
                 </h3>
                 <ul>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Terms & Conditions
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-4">
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75"
-                      href="/"
-                    >
+                    <Link className="text-base font-medium text-gray-900 dark:text-white dark:hover:text-gray-700 duration-75" to="/">
                       Licensing
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -153,9 +119,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="mt-4 md:mt-0">
-          <p className="text-sm font-medium  text-gray-500">
-            © 2024 GadgetGalaxy. All rights reserved.
-          </p>
+          <p className="text-sm font-medium text-gray-500">© 2024 GadgetGalaxy. All rights reserved.</p>
         </div>
       </div>
     </footer>

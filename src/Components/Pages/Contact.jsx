@@ -1,5 +1,6 @@
-import React from "react";
-import { Menu, X, MapPin } from "lucide-react";
+
+import React, { useState } from 'react'
+import { Menu, X, MapPin } from 'lucide-react'
 
 const menuItems = [
   {
@@ -17,11 +18,61 @@ const menuItems = [
 ];
 
 export function Contact() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const initialFormState = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    message: "", 
   };
+
+  const [form, setForm] = useState(initialFormState);
+
+  const handleChange = (ev) => {
+    const { name, value } = ev.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleContactSubmit = async (ev) => {
+    ev.preventDefault();
+
+    console.log(form);
+    if (form.firstName && form.lastName && form.email && form.mobile && form.message) {
+      try {
+        const response = await fetch("http://localhost:4001/contact", {
+          method: "POST",
+          body: JSON.stringify(form),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+
+        if (data) {
+          console.log("User data:", data);
+          // Clear the form after successful submission
+          setForm(initialFormState);
+        } else {
+          alert(data.error || "An unknown error occurred");
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+
+
+
 
   return (
     <div>
@@ -54,7 +105,7 @@ export function Contact() {
                 <p className="mt-4 text-lg text-gray-600">
                   Our friendly team would love to hear from you.
                 </p>
-                <form action="" className="mt-8 space-y-4">
+                <form action="" method="POST" onSubmit={handleContactSubmit} className="mt-8 space-y-4">
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div className="grid w-full  items-center gap-1.5">
                       <label
@@ -66,8 +117,11 @@ export function Contact() {
                       <input
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black"
                         type="text"
+                        value={form.firstName}
                         id="first_name"
+                        name='firstName'
                         placeholder="First Name"
+                        onChange={(ev) => handleChange(ev)}
                       />
                     </div>
                     <div className="grid w-full  items-center gap-1.5">
@@ -81,7 +135,10 @@ export function Contact() {
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1  dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900 text-black"
                         type="text"
                         id="last_name"
+                        name='lastName'
+                        value={form.lastName}
                         placeholder="Last Name"
+                        onChange={(ev) => handleChange(ev)}
                       />
                     </div>
                   </div>
@@ -97,6 +154,9 @@ export function Contact() {
                       type="text"
                       id="email"
                       placeholder="Email"
+                      value={form.email}
+                      name='email'
+                      onChange={(ev) => handleChange(ev)}
                     />
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
@@ -111,6 +171,9 @@ export function Contact() {
                       type="tel"
                       id="phone_number"
                       placeholder="Phone number"
+                      name='mobile'
+                      value={form.mobile}
+                      onChange={(ev) => handleChange(ev)}
                     />
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
@@ -125,10 +188,13 @@ export function Contact() {
                       id="message"
                       placeholder="Leave us a message"
                       cols={4}
+                      name='message'
+                      value={form.message}
+                      onChange={(ev) => handleChange(ev)}
                     />
                   </div>
                   <button
-                    type="button"
+                    type="submit"
                     className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
