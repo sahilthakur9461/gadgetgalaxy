@@ -1,5 +1,5 @@
-import React from 'react';
-import Sidebar from '../layout/Sidebar';
+import React from "react";
+import Sidebar from "../layout/Sidebar";
 
 function AdminDashboard() {
   return (
@@ -13,7 +13,7 @@ function AdminDashboard() {
           <h1 className="text-xl font-bold">Admin Dashboard</h1>
           {/* Add any header elements here */}
         </div>
-        
+
         <div className="p-4 flex-1">
           {/* Your main content goes here */}
           <p>Main content area...</p>

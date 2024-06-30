@@ -1,27 +1,27 @@
 import logo from "../img/gg.jpg";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
-import '../../App.css';
+import "../../App.css";
 import Darkmode from "../modules/Darkmode";
 import LoginIcon from "../modules/LoginIcon";
 import Login from "../registration/Login";
 
 const menuItems = [
   {
-    name: 'Home',
-    href: '/',
+    name: "Home",
+    href: "/",
   },
   {
-    name: 'About',
-    href: '/About',
+    name: "About",
+    href: "/About",
   },
   {
-    name: 'Contact',
-    href: '/Contact',
+    name: "Contact",
+    href: "/Contact",
   },
-
+  
 ];
 
 export function Header() {
@@ -43,7 +43,9 @@ export function Header() {
           <span>
             <img width="30" height="30" src={logo} alt="Logo" />
           </span>
-          <span className="font-bold text-xl text-gray-900 dark:text-gray-100">GadgetGalaxy</span>
+          <span className="font-bold text-xl text-gray-900 dark:text-gray-100">
+            GadgetGalaxy
+          </span>
         </div>
 
         <div className="hidden lg:block mt-2">
@@ -62,19 +64,32 @@ export function Header() {
               <button className="inline-flex items-center gap-1  px-2 text-sm text-gray-900 dark:text-gray-100 rounded-full font-semibold cursor-pointer shadow-xs transition-all duration-200 hover:text-blue-500 dark:hover:text-blue-400">
                 Dropdown Hover
               </button>
-              <div className="dropdown-menu absolute top-full left-0 w-48 mt-2 hidden group-hover:block   dark:bg-neutral-900 rounded-md shadow-lg">
+              <div className="dropdown-menu absolute top-full left-0 w-48 mt-0 hidden group-hover:block   dark:bg-neutral-900 rounded-md shadow-lg">
                 <ul className="py-1">
                   <li>
-                    <a className="block px-4 py-2 text-gray-900 dark:text-gray-100  hover:bg-gray-100 dark:hover:bg-gray-700" href="/Product">All Product</a>
+                    <a
+                      className="block px-4 py-2 text-gray-900 dark:text-gray-100  hover:bg-gray-100 dark:hover:bg-gray-700"
+                      href="/Product"
+                    >
+                      All Product
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      className="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      href="/Discount"
+                    >
+                      Discount
+                    </a>
                   </li>
                   <li>
-                    <a className="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700" href="/">Trending</a>
-                  </li>
-                  <li>
-                    <a className="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700" href="/">Discount</a>
-                  </li>
-                  <li>
-                    <a className="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-700" href="/">Hot's</a>
+                    <a
+                      className="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      href="/"
+                    >
+                      Hot's
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -86,14 +101,16 @@ export function Header() {
           <div className="relative group">
             <input
               className={`search-bar transition-all duration-300 ${
-                isInputVisible ? 'w-96 opacity-100 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' : 'w-0 opacity-0'
+                isInputVisible
+                  ? "w-96 opacity-100 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  : "w-0 opacity-0"
               }`}
               type="text"
               placeholder="Search"
             />
-            <IoMdSearch 
-              className="text-xl text-gray-600 group-hover:text-blue-500 dark:text-gray-400 cursor-pointer ml-2 absolute top-1/2 transform -translate-y-1/2 right-3 duration-200" 
-              onClick={toggleInputVisibility} 
+            <IoMdSearch
+              className="text-xl text-gray-600 group-hover:text-blue-500 dark:text-gray-400 cursor-pointer ml-2 absolute top-1/2 transform -translate-y-1/2 right-3 duration-200"
+              onClick={toggleInputVisibility}
             />
           </div>
 
@@ -108,8 +125,11 @@ export function Header() {
           <LoginIcon />
 
           <div className="ml-2 lg:hidden">
-            <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer text-gray-900 dark:text-gray-100" 
-           />  <Login/>
+            <Menu
+              onClick={toggleMenu}
+              className="h-6 w-6 cursor-pointer text-gray-900 dark:text-gray-100"
+            />{" "}
+            <Login />
           </div>
         </div>
 
@@ -122,7 +142,9 @@ export function Header() {
                     <span>
                       <img width="30" height="30" src={logo} alt="Logo" />
                     </span>
-                    <span className="font-bold text-xl text-gray-900 dark:text-gray-100">GadgetGalaxy</span>
+                    <span className="font-bold text-xl text-gray-900 dark:text-gray-100">
+                      GadgetGalaxy
+                    </span>
                   </div>
                   <button
                     type="button"

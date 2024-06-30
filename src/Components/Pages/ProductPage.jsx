@@ -1,73 +1,284 @@
-// src/components/ProductPage.js
-
 import React from "react";
 import video from "../img/productad.mp4";
-import laptop from "../img/laptopproduct.jpg"
-import speaker from "../img/speakerproduct.jpg"
+import laptop from "../img/laptopproduct.jpg";
+import speaker from "../img/speakerproduct.jpg";
+import Image from "../img/about.jpg";
 
 const ProductPage = () => {
   return (
-    <div className=" bg-gray-100">
+    <div className="w-full bg-gray-100  flex flex-col ">
       {/* <main className="container mx-auto px-6 py-8"> */}
-        <div className="bg-white p-4 rounded-md shadow-md  h-[489px] relative z-0 w-full">
-          <video
-            src={video}
-            className="w-full h-[460px] object-cover rounded-md"
-            controls
-            object-fill
-          >
-            Your browser does not support the video tag.
-          </video>
+      <div className="bg-white p-4  rounded-md shadow-md  h-[489px] relative z-0 w-full">
+        <video
+          src={video}
+          className="w-full h-[460px] object-cover rounded-md"
+          controls
+          object-fill
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Suggetion */}
+      <div className=" w-full h-[100px] flex justify-center items-center text-5xl  font-medium font-serif text-black-600 text-neutral-900">
+        Suggetion
+      </div>
+      <div className="flex  ">
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-6 container">
-          <div className="bg-white  rounded-md shadow-md hover:scale-110 duration-300">
-            <img src={laptop} alt="" />
-          </div>
-          <div className="bg-white rounded-md shadow-md hover:scale-110 duration-300">
-          <img src={laptop} alt="" />
-          </div>
-          <div className="bg-white  rounded-md shadow-md hover:scale-110 duration-300">
-          <img src={laptop} alt="" /> 
-          </div>
-          <div className="bg-white  rounded-md shadow-md hover:scale-110 duration-300">
-          <img src={laptop} alt="" className="object-fill" />
-          </div>
-          <div className="bg-white  rounded-md shadow-md hover:scale-110 duration-300">
-          <img src={speaker} alt="" />       
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
           </div>
         </div>
 
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">Suggestions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
           </div>
-        </section>
+        </div>
 
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">Best Gadget's</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">Top Trendy's</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
-            <div className="bg-white p-4 rounded-md shadow-md"></div>
+      <div className=" w-full h-[100px] flex justify-center items-center text-5xl  font-medium font-serif text-black-600 text-neutral-900">
+        Suggetion
+      </div>
+      <div className="flex">
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
           </div>
-        </section>
-      {/* </main> */}
+        </div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className=" w-full h-[100px] flex justify-center items-center text-5xl  font-medium font-serif text-black-600 text-neutral-900">
+        Suggetion
+      </div>
+      <div className="flex">
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+        <div className="w-[300px] rounded-md border ml-4">
+          <img
+            src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="Laptop"
+            className="h-[200px] w-full rounded-md object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-lg font-semibold">About Macbook</h1>
+            <p className="mt-3 text-sm text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, debitis?
+            </p>
+            <button
+              type="button"
+              className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

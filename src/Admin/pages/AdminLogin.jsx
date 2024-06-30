@@ -27,7 +27,8 @@ function AdminLogin() {
         <h2 className="text-2xl font-bold mb-6 text-center">Admin Login</h2>
         <form id="loginForm" onSubmit={handleLogin}>
           <div className="flex items-center mb-4 border-b border-gray-300 py-2">
-            <AiOutlineUser className="text-gray-500 mr-2" size={20} /> {/* Use React Icon */}
+            <AiOutlineUser className="text-gray-500 mr-2" size={20} />{" "}
+            {/* Use React Icon */}
             <input
               type="text"
               id="username"
@@ -40,7 +41,8 @@ function AdminLogin() {
             />
           </div>
           <div className="flex items-center mb-6 border-b border-gray-300 py-2">
-            <AiOutlineLock className="text-gray-500 mr-2" size={20} /> {/* Use React Icon */}
+            <AiOutlineLock className="text-gray-500 mr-2" size={20} />{" "}
+            {/* Use React Icon */}
             <input
               type="password"
               id="password"

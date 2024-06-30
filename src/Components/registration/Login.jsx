@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Login = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="bg-gray-800 rounded-lg shadow-lg p-10 max-w-md w-full text-center mx-auto z-1000">
       <form className="flex flex-col">
         <p className="text-white font-medium text-4xl mb-1">Login</p>
-        <p className="text-white font-normal text-base mb-4">Login to your account</p>
+        <p className="text-white font-normal text-base mb-4">
+          Login to your account
+        </p>
         <div className="mb-5">
           <input
             value={username}
-            onChange={(e)=> setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
             required
             placeholder="Username"
             id="username"
@@ -37,8 +39,23 @@ const Login = () => {
           Login
         </button>
         <div className="flex flex-col items-center mt-5 text-white text-base font-normal">
-          <p>Don't have an account? <a href="#" className="text-blue-600 transition-colors duration-300 hover:text-blue-400">Sign Up</a></p>
-          <p><a href="#" className="text-blue-600 transition-colors duration-300 hover:text-blue-400">Forgot password?</a></p>
+          <p>
+            Don't have an account?{" "}
+            <a
+              href="#"
+              className="text-blue-600 transition-colors duration-300 hover:text-blue-400"
+            >
+              Sign Up
+            </a>
+          </p>
+          <p>
+            <a
+              href="#"
+              className="text-blue-600 transition-colors duration-300 hover:text-blue-400"
+            >
+              Forgot password?
+            </a>
+          </p>
         </div>
       </form>
     </div>
