@@ -1,7 +1,7 @@
 import React from "react";
 import {
   FaHome,
-  FaBell,
+  FaEye ,
   FaUsers,
   FaBoxOpen,
   FaChevronRight,
@@ -53,7 +53,7 @@ const App = () => {
 const menuItems = [
   { label: "Dashboard", link: "/Admindashboard", icon: FaHome },
   { label: "Add Products", link: "/Addproduct", icon: MdOutlineInventory2 },
-  { label: "Edit Product", link: "/Editproduct", icon: FaBell },
+  { label: "View Product", link: "/Viewproduct", icon: FaEye  },
   { label: "Users", link: "#", icon: FaUsers },
   { label: "Querys", link: "/Coustomerquery", icon: MdQueryStats },
   { label: "Orders", link: "#", icon: FaBoxOpen },

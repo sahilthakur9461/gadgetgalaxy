@@ -17,7 +17,8 @@ import AdminDashboard from './Admin/pages/AdminDashboard';
 import AddProduct from './Admin/pages/AddProduct';
 import { SignUp } from './Components/registration/SignUp';
 import CoustomerQuery from './Admin/pages/CoustomerQuery';
-import EditProduct from './Admin/pages/EditProduct';
+import ViewProduct from './Admin/pages/ViewProduct';
+import UpdateProduct from './Admin/pages/UpdateProduct';
 
 
 
@@ -34,7 +35,8 @@ function App() {
     <Route path="/Admindashboard" element={<AdminDashboard />} /> 
     <Route path="/Addproduct" element={<AddProduct />} /> 
     <Route path="/Coustomerquery" element={<CoustomerQuery />} /> 
-    <Route path="/Editproduct" element={<EditProduct />} /> 
+    <Route path="/Viewproduct" element={<ViewProduct />} /> 
+    <Route path="/Updateproduct/:id" element={<UpdateProduct />} /> 
   
     <Route path="/SignUp" element={<SignUp />} /> 
     <Route path="/Login" element={<Login />} /> 
