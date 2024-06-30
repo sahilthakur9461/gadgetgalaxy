@@ -4,18 +4,18 @@ import { Menu, X, MapPin } from 'lucide-react'
 
 const menuItems = [
   {
-    name: 'Home',
-    href: '/Home',
+    name: "Home",
+    href: "/Home",
   },
   {
-    name: 'About',
-    href: '/About',
+    name: "About",
+    href: "/About",
   },
   {
-    name: 'Contact',
-    href: '/Contact',
+    name: "Contact",
+    href: "/Contact",
   },
-]
+];
 
 export function Contact() {
 
@@ -88,7 +88,10 @@ export function Contact() {
             CONTACT US
           </p>
           <p className="mx-auto max-w-4xl text-center text-base text-gray-600 md:text-xl">
-          "Have questions or feedback? We're here to help! Feel free to reach out to us via the contact form below or directly at [email address]. Our team strives to respond to all inquiries promptly. We look forward to hearing from you!"
+            "Have questions or feedback? We're here to help! Feel free to reach
+            out to us via the contact form below or directly at [email address].
+            Our team strives to respond to all inquiries promptly. We look
+            forward to hearing from you!"
           </p>
         </div>
         <div className="mx-auto max-w-7xl py-12 md:py-24">
@@ -96,7 +99,9 @@ export function Contact() {
             {/* contact from */}
             <div className="flex items-center justify-center">
               <div className="px-2 md:px-12">
-                <p className="text-2xl font-bold text-gray-900 md:text-4xl">Get in touch</p>
+                <p className="text-2xl font-bold text-gray-900 md:text-4xl">
+                  Get in touch
+                </p>
                 <p className="mt-4 text-lg text-gray-600">
                   Our friendly team would love to hear from you.
                 </p>
@@ -195,7 +200,6 @@ export function Contact() {
                     Send Message
                   </button>
                 </form>
-
               </div>
             </div>
             <img
@@ -208,15 +212,5 @@ export function Contact() {
       </div>
       <hr className="mt-6" />
     </div>
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,14 +1,13 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "./Components/Layouts/Layout";
+import Home from "./Components/Pages/Home";
+import { About } from "./Components/Pages/About";
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Layout from './Components/Layouts/Layout';
-import Home from './Components/Pages/Home';
-import { About } from './Components/Pages/About';
+import { BackgroundBeams } from "./Components/BackgroundBerams";
 
-import { BackgroundBeams } from './Components/BackgroundBerams';
-
-import Login from './Components/registration/Login';
+import Login from "./Components/registration/Login";
 
 import { Contact } from './Components/Pages/Contact';
 import ProductPage from './Components/Pages/ProductPage';
@@ -25,7 +24,6 @@ import UpdateProduct from './Admin/pages/UpdateProduct';
 
 
 function App() {
- 
   return (
    <>
    <BrowserRouter>
@@ -60,12 +58,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-   
-  
-
-
