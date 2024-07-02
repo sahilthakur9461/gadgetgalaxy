@@ -110,12 +110,12 @@ export function Header() {
             />
           </div>
 
-          <button className="relative">
+          <Link to="/cart" className="relative">
             <FaCartShopping className="text-xl text-gray-600 dark:text-gray-400" />
             <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
               4
             </div>
-          </button>
+          </Link>
 
           <Darkmode />
           <LoginIcon />
