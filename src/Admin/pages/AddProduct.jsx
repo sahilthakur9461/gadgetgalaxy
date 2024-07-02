@@ -89,7 +89,7 @@ const AddProduct = () => {
                 </label>
                 <textarea
                   id="description"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="mt-1 block w-full border-gray-300  bg-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   rows="3"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
@@ -106,7 +106,7 @@ const AddProduct = () => {
                 <input
                   type="number"
                   id="price"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="mt-1 block w-full border-gray-300 bg-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   value={price}
                   style={{ minHeight: "3rem" }}
                   onChange={(e) => setPrice(e.target.value)}
@@ -123,7 +123,7 @@ const AddProduct = () => {
                 <input
                   type="text"
                   id="category"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="mt-1 block w-full border-gray-300 bg-gray-700 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   value={category}
                   style={{ minHeight: "3rem" }}
                   onChange={(e) => setCategory(e.target.value)}
@@ -141,7 +141,7 @@ const AddProduct = () => {
                 <div className="mt-1 flex items-center">
                   <label
                     htmlFor="upload-button"
-                    className="cursor-pointer bg-white rounded-md py-2 px-3 border border-gray-300 shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="cursor-pointer bg-gray-700 rounded-md py-2 px-3 border border-gray-300 shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   >
                     Upload Photo
                   </label>

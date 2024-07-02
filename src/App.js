@@ -18,6 +18,8 @@ import { SignUp } from './Components/registration/SignUp';
 import CoustomerQuery from './Admin/pages/CoustomerQuery';
 import ViewProduct from './Admin/pages/ViewProduct';
 import UpdateProduct from './Admin/pages/UpdateProduct';
+import AddCategory from "./Admin/pages/AddCategory";
+import Cart from "./Components/Pages/Cart";
 
 
 
@@ -35,6 +37,7 @@ function App() {
     <Route path="/Coustomerquery" element={<CoustomerQuery />} /> 
     <Route path="/Viewproduct" element={<ViewProduct />} /> 
     <Route path="/Updateproduct/:id" element={<UpdateProduct />} /> 
+    <Route path="/Addcategory" element={<AddCategory />} /> 
   
     <Route path="/SignUp" element={<SignUp />} /> 
     <Route path="/Login" element={<Login />} /> 
@@ -45,6 +48,7 @@ function App() {
     <Route path="/About" element={<About />} /> 
     <Route path="/Contact" element={<Contact />} /> 
     <Route path="/Product" element={<ProductPage />} /> 
+    <Route path="/Cart" element={<Cart />} /> 
 
 
 

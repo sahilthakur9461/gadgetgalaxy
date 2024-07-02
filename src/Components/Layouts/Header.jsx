@@ -125,7 +125,7 @@ export function Header() {
               onClick={toggleMenu}
               className="h-6 w-6 cursor-pointer text-gray-900 dark:text-gray-100"
             />{" "}
-            <Login />
+            
           </div>
         </div>
 

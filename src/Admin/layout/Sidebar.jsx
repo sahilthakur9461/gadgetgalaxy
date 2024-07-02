@@ -8,6 +8,7 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { MdOutlineInventory2, MdQueryStats } from "react-icons/md";
+import { TbCategory } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 const App = () => {
@@ -54,7 +55,7 @@ const menuItems = [
   { label: "Dashboard", link: "/Admindashboard", icon: FaHome },
   { label: "Add Products", link: "/Addproduct", icon: MdOutlineInventory2 },
   { label: "View Product", link: "/Viewproduct", icon: FaEye  },
-  { label: "Users", link: "#", icon: FaUsers },
+  { label: "Add Category", link: "/Addcategory", icon: TbCategory  },
   { label: "Querys", link: "/Coustomerquery", icon: MdQueryStats },
   { label: "Orders", link: "#", icon: FaBoxOpen },
   { label: "Logout", link: "/Adminlogin", icon: FaSignOutAlt },

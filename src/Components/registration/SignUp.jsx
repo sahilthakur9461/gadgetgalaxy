@@ -11,13 +11,17 @@ export function SignUp() {
     console.log("current user",user)
   
 
-  const [form, setForm] = useState({
-    username: "",
-    email: "",
-    password: "",
-   
-  });
+    const initialFormState = {
+      username: "",
+      email: "",
+      password: "",
+     
+    };
 
+  const [form, setForm] = useState(initialFormState);
+
+
+ 
 
   const handleChange = (ev) => {
     const { name, value } = ev.target;
@@ -31,7 +35,6 @@ export function SignUp() {
 
   const handleUserSubmit = async(ev) => {
     ev.preventDefault();
-
     console.log(form);
     if (form.username && form.email  && form.password) {
       fetch("http://localhost:4001/signup", {
@@ -47,6 +50,7 @@ export function SignUp() {
 
           if (data) {
             console.log("User data:", data);
+            setForm(initialFormState);
             
           } else {
             alert(data.error || "An unknown error occurred");
